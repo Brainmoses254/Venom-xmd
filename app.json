@@ -1,6 +1,6 @@
 {
   "name": "JUNEX",
-  "description": "June-xmb, your friendly assistant!",
+  "description": "June-x, your friendly assistant!",
   "logo": "https://files.catbox.moe/tihrtk.jpg",
   "keywords": [],
   "repository": "https://github.com/Vinpink2/JUNE-X",
@@ -15,7 +15,7 @@
   },
 "env": {
   "SESSION_ID": {
-    "description": "Must begin with 'JUNE-xm:~'.",
+    "description": "Must begin with 'JUNE-MD:~'.",
     "value": "",
     "required": true
   }
@@ -40,4 +40,4 @@
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
     }
   ]
-    }
+}
