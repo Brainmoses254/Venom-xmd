@@ -1,43 +1,22 @@
+
+---
+
+### 5. `app.json` (For Heroku Button Deploy)
+```json
 {
-  "name": "JUNEX",
-  "description": "June-x, your friendly assistant!",
-  "logo": "https://files.catbox.moe/tihrtk.jpg",
-  "keywords": [],
-  "repository": "https://github.com/Vinpink2/JUNE-X",
-  "stack": "container",
-  "addons": [
-    {
-      "plan": "heroku-postgresql"
-    }
-  ],
-  "scripts": {
-    "start": "node index.js"
-  },
-"env": {
-  "SESSION_ID": {
-    "description": "Must begin with 'JUNE-MD:~'.",
-    "value": "",
-    "required": true
-  }
-},  
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "basic"
+  "name": "venom-xmd",
+  "description": "A Node.js project named Venom-xmd",
+  "repository": "https://github.com/yourusername/venom-xmd",
+  "keywords": ["node", "express", "venom-xmd"],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
     }
   },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
     }
   ]
 }
