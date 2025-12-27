@@ -1,25 +1,18 @@
-FROM node:lts
+# Use official Node.js LTS image
+FROM node:18
+
+# Create app directory
+WORKDIR /usr/src/app
 
 # Install dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
-
-# Set working directory
-WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
+RUN npm install --production
 
-# Install dependencies
-RUN npm install && npm cache clean --force
-
-# Copy application code
+# Bundle app source code
 COPY . .
 
 # Expose port
 EXPOSE 3000
 
-# Set environment
-ENV NODE_ENV production
-
-# Run command
-CMD ["npm", "run", "start", "index.js"]
+# Run the app
+CMD ["npm", "start"]
